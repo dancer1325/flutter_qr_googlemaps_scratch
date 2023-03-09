@@ -198,5 +198,6 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 ## Notes:
 * Problems:
   * Problem1: `Error: To set up CocoaPods for ARM macOS, run: sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc`
-    * Solution: `sudo gem uninstall cocoapods` & `brew install cocoapods` . [Reference Link] (https://stackoverflow.com/questions/64901180/how-to-run-cocoapods-on-apple-silicon-m1) 
-  * Problem2: `[!] App requires Multidex support`  
+    * Solution: `sudo gem uninstall cocoapods` & `brew install cocoapods` . [ReferenceLink](https://stackoverflow.com/questions/64901180/how-to-run-cocoapods-on-apple-silicon-m1) 
+  * Problem2: `[!] App requires Multidex support`
+    * Solution: Add multiDex properties, following [thisLink](https://developer.android.com/studio/build/multidex?hl=es-419#keep)
