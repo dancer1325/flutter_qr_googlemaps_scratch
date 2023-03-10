@@ -171,6 +171,11 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 ---
 
 ## How to run?
+* Configuration needed by the dependencies
+  * 'flutter_barcode_scanner'
+    * [Ios]
+      * Follow [this](https://pub.dev/packages/flutter_barcode_scanner#getting-started)
+    * :warning: It doesn't work in the emulator :warning:
 * Configure your device
     * Simulator
         * Built-in IDE
@@ -202,3 +207,7 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
     * Solution: `sudo gem uninstall cocoapods` & `brew install cocoapods` . [ReferenceLink](https://stackoverflow.com/questions/64901180/how-to-run-cocoapods-on-apple-silicon-m1) 
   * Problem2: `[!] App requires Multidex support`
     * Solution: Add multiDex properties, following [thisLink](https://developer.android.com/studio/build/multidex?hl=es-419#keep)
+  * Problem3: When you try to deploy in your real physical IPhone, you could get `IPHONEOS_DEPLOYMENT_TARGET is set to 8.0, but the range of supported deployment target versions is`
+    * Attempt1: [Link](https://developer.apple.com/forums/thread/656616)
+    * Solution: Previous attempt1 and switch in XCode, under Pods, Deployment, the iOS deployment target
+  * Problem4: Apparently no error and it's not working :question:
