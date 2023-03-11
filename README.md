@@ -203,6 +203,9 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
 ## Notes:
 * TODO:
   * Check if 'provider' dependency could be discarded, since we are using bloc 
+* SQLiteBrowser
+  * [Link](https://github.com/sqlitebrowser/sqlitebrowser)
+  * DB Browser for SQLite
 * Problems:
   * Problem1: `Error: To set up CocoaPods for ARM macOS, run: sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc`
     * Solution: `sudo gem uninstall cocoapods` & `brew install cocoapods` . [ReferenceLink](https://stackoverflow.com/questions/64901180/how-to-run-cocoapods-on-apple-silicon-m1) 
@@ -214,3 +217,5 @@ Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info
   * Problem4: `[flutter_barcode_scanner] Thread Performance Checker: -[AVCaptureSession startRunning] should be called from background thread. Calling it on the main thread can lead to UI unresponsiveness`
     * Attempt1: Existing [issue](https://github.com/AmolGangadhare/flutter_barcode_scanner/issues/296#issuecomment-1256534722) in flutter_barcode_scanner. NO solved.
     * TODO: Replace flutter_barcode_scanner by mobile_scanner
+  * Problem5: `FlutterObservatoryPublisher.mm(97)] Failed to register observatory port with mDNS with error -65555.`
+    * TODO: Try [this](https://flutter.dev/docs/development/add-to-app/ios/project-setup#local-network-privacy-permissions)
