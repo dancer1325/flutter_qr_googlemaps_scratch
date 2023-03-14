@@ -13,13 +13,18 @@ class ScanTiles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+
+    // listen   By default, it's true.  Required for listening changes, once a new scan happens
+    // Normally it the provider is into a build --> you will be interested in listening
+    // Normally it the provider is into a event listener  --> you will not be interested in listening
     final scanListProvider = Provider.of<ScanListProvider>(context);
     final scans = scanListProvider.scans;
 
+    // ListView
+    // Allows scrolling
     return ListView.builder(
       itemCount: scans.length,
-      itemBuilder: ( _, i ) => Dismissible(
+      itemBuilder: ( _, i ) => Dismissible(     // _    BuildContext, which it's not interesting for us
         key: UniqueKey(),
         background: Container(
           color: Colors.red,
@@ -28,7 +33,7 @@ class ScanTiles extends StatelessWidget {
           Provider.of<ScanListProvider>(context, listen: false)
               .borrarScanPorId(scans[i].id);
         },
-        child: ListTile(
+        child: ListTile(        // ListTile         Single fixed-height row
           leading: Icon( 
             this.type == 'http'
               ? Icons.home_outlined

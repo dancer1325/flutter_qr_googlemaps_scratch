@@ -28,6 +28,8 @@ class ScanButton extends StatelessWidget {
           return;
         }
 
+        // Get access to the ScanListProvider via context, casting to ScanListProvider
+        // listen   false - Since it won't be redrawn in case that there are value changes, my code is in charge of relaunching the request
         final scanListProvider = Provider.of<ScanListProvider>(context, listen: false);
         
         final nuevoScan = await scanListProvider.nuevoScan(barcodeScanRes);
