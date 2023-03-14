@@ -24,11 +24,12 @@ class ScanTiles extends StatelessWidget {
     return ListView.builder(
       itemCount: scans.length,
       itemBuilder: ( _, i ) => Dismissible(     // _    BuildContext, which it's not interesting for us
-        key: UniqueKey(),
+        // Dismissible      If you drag in certain direction ⟶ entry can be dismissed
+        key: UniqueKey(),   // Flutter's function to create an unique key
         background: Container(
           color: Colors.red,
         ),
-        onDismissed: (DismissDirection direction) {
+        onDismissed: (DismissDirection direction) {   // event about what to make after dragging to dismiss
           // Normally it the provider is into a event listener  --> you will not be interested in listening
           Provider.of<ScanListProvider>(context, listen: false)
               .borrarScanPorId(scans[i].id);
