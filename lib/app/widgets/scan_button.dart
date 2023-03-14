@@ -16,7 +16,7 @@ class ScanButton extends StatelessWidget {
 
         // Testing the Widget
         // 1) Hardcoding 'scanBarcode' functionality
-        // final barcodeScanRes = 'geo:45.287135,-75.920226';
+        // final barcodeScanRes = 'geo:45.287135,-75.920226';   // Geo coordinates copied from any place from Google Maps
         // print(barcodeScanRes);
 
         // 2) 'scanBarcode' functionality

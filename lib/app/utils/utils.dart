@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_qr_googlemaps_scratch/app/models/scan_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-launchURL( BuildContext context, ScanModel scan  ) async {
+Future<void> launchURL( BuildContext context, ScanModel scan  ) async {
 
   final url = scan.value;
 

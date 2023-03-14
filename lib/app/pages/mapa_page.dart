@@ -18,6 +18,7 @@ class _MapaPageState extends State<MapaPage> {
   @override
   Widget build(BuildContext context) {
 
+    // Read the arguments passed
     final scan = ModalRoute.of(context)?.settings.arguments as ScanModel;
 
     final puntoInicial = CameraPosition(
