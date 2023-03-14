@@ -16,7 +16,6 @@ class ScanTiles extends StatelessWidget {
 
     // listen   By default, it's true.  Required for listening changes, once a new scan happens
     // Normally it the provider is into a build --> you will be interested in listening
-    // Normally it the provider is into a event listener  --> you will not be interested in listening
     final scanListProvider = Provider.of<ScanListProvider>(context);
     final scans = scanListProvider.scans;
 
@@ -30,6 +29,7 @@ class ScanTiles extends StatelessWidget {
           color: Colors.red,
         ),
         onDismissed: (DismissDirection direction) {
+          // Normally it the provider is into a event listener  --> you will not be interested in listening
           Provider.of<ScanListProvider>(context, listen: false)
               .borrarScanPorId(scans[i].id);
         },

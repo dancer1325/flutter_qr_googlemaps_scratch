@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon( Icons.delete_forever ), 
             onPressed: (){
-
+              // Normally it the provider is into a event listener  --> you will not be interested in listening
               Provider.of<ScanListProvider>(context, listen: false)
                 .borrarTodos();
 
@@ -49,6 +49,7 @@ class _HomePageBody extends StatelessWidget {
 
     // Get access to the ScanListProvider via context, casting to ScanListProvider
     // listen   false - Since it won't be redrawn in case that there are value changes, my code is in charge of relaunching the request
+    // Normally it the provider is into a event listener  --> you will not be interested in listening
     final scanListProvider = Provider.of<ScanListProvider>(context, listen: false);
 
     switch( currentIndex ) {
