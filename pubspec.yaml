@@ -1,0 +1,40 @@
+name: flutter_qr_googlemaps_scratch
+description: A Very Good Project created by Very Good CLI.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  # Impossible to update 2.20, because current stable Flutter version uses dart 2.19.0
+  # sdk: ">=2.20.0 <3.0.0"
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  # Added by default, by very_good_cli
+  bloc: ^8.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  # Added directly, copy and paste from the existing mirror repo
+  cupertino_icons: ^1.0.5
+  provider: 6.0.5
+  flutter_barcode_scanner: ^2.0.0
+  path_provider: ^2.0.13
+  sqflite: ^2.2.5
+  url_launcher: ^6.1.10
+  # google_maps_flutter: ^2.2.5     # Requires dark sdk >= 20
+  google_maps_flutter: 2.0.0
+  path: ^1.8.2
+
+dev_dependencies:
+  bloc_test: ^9.1.1
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+  very_good_analysis: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
